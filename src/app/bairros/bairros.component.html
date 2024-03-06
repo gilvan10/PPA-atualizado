@@ -1,0 +1,48 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <div class="caixa">
+      <ul class="nav-list">
+          <li class="li-p"><h4>Selecione a prefeitura-bairro e o período para visualizar os bairros:</h4></li>
+          <li class="li-p">
+              <select class="form-select" #pref (change)="onPref(pref.value)">
+                <option default>Centro/Brotas</option>
+                <option>Subúrbio/Ilhas</option>
+                <option>Cajazeiras</option>
+                <option>Itapuâ/Ipitanga</option>
+                <option>Cidade Baixa</option>
+                <option>Barra/Pituba</option>
+                <option>Liberdade/São Caetano</option>
+                <option>Cabula/Trancredo Neves</option>
+                <option>Pau da Lima</option>
+                <option>Valéria</option>
+                <!--<option>Inter-Regionais</option>-->
+              </select>         
+          </li>
+          <li>
+              <select class="form-select" #teams (change)="onSelected(teams.value)">
+                <option default>2022-2025</option>
+                <option>2018-2021</option>
+              </select> 
+          </li>
+          <li>
+            <button type="button" class="btn btn-primary" (click)="getBairros()">Buscar</button>
+          </li>
+      </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Bairros da prefeitura-bairro: {{prefeituraBairro}} do período {{periodo}}</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bairro of bairros">
+          <th scope="row">{{bairro.idBairro}}</th>
+          <td>{{bairro.nome}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

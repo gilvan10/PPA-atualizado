@@ -1,0 +1,22 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Ações do programa: {{programa}} do período {{periodo}}</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let acao of acoes">
+             <th scope="row">{{acao.idInformacao}}</th>
+             <td>{{acao.nomeAcao}}</td>
+             <td>{{acao.nomeProduto}}</td>
+             <td>{{acao.quantidade}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>

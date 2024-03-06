@@ -1,0 +1,71 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <div class="caixa">
+      <ul class="nav-list">
+          <li class="li-p"><h4>Selecione o período do ppa e uma prefeitura-bairro para visualizar as ações:</h4></li>
+          <li class="li-p">
+              <!--<p>sua opção escolhida {{ periodo }} usando o evento de mudança</p>-->
+              <select class="form-select" #teams (change)="onSelected(teams.value)">
+                <option default>2022-2025</option>
+                <option>2018-2021</option>
+              </select>
+          </li>
+      </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Prefeituras-Bairro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Centro-Brotas')">Centro/Brotas</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Subúrbio-Ilhas')">Subúrbio/Ilhas</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Cajazeiras')">Cajazeiras</button></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Itapuã-Ipitanga')">Itapuã/Ipitanga</button></td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Cidade-Baixa')">Cidade Baixa</button></td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Barra-Pituba')">Barra/Pituba</button></td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Liberdade-São-Caetano')">Liberdade/São Caetano</button></td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Cabula-Trancredo-Neves')">Cabula/Tancredo Neves</button></td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Pau-da-Lima')">Pau da Lima</button></td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Valéria')">Valéria</button></td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td><button type="button" class="btn btn-link" (click)="getAcoes('Inter-Regionais')">Inter-Regionais</button></td>
+          </tr>
+        </tbody>
+    </table>
+   </div>

@@ -1,0 +1,33 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <div class="caixa">
+        <ul class="nav-list">
+            <li class="li-p"><h4>Selecione o período do ppa para visualizar os eixos:</h4></li>
+            <li class="li-p">
+                <!--<p>sua opção escolhida {{ periodo }} usando o evento de mudança</p>-->
+                <select class="form-select" #teams (change)="onSelected(teams.value)">
+                  <option default>2022-2025</option>
+                  <option>2018-2021</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Eixos do período: {{periodo}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let eixo of eixos">
+              <th scope="row">{{eixo.idEixo}}</th>
+              <td><button type="button" class="btn btn-link"  (click)="getProgramas(eixo.nome)">{{eixo.nome}}</button></td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+

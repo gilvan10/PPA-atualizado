@@ -1,0 +1,24 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <div class="caixa">
+      <ul class="nav-list">
+          <li class="li-p"><h4>Prefeituras-Bairro vinculadas a ação: {{acao}}</h4></li>
+      </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <!--<th scope="col">#</th> -->
+            <th scope="col">Prefeituras-Bairro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let acao of acoes">
+            <!--<th scope="row">{{acao.idInformacao}}</th>-->
+            <td>{{acao.nome}}</td>
+          </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="teste">
+    <app-header></app-header>
+    <br>
+    <div class="caixa">
+        <ul class="nav-list">
+            <li class="li-p"><h4>Selecione o período do ppa para visualizar os programas:</h4></li>
+            <li class="li-p">
+                <!--<p>sua opção escolhida {{ periodo }} usando o evento de mudança</p>-->
+                <select class="form-select" #teams (change)="onSelected(teams.value)">
+                  <option default>2022-2025</option>
+                  <option>2018-2021</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Programas do período: {{periodo}}</th>
+              <th scope="col">Orçamento</th>
+              <th scope="col">Extraorçamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let programa of programas">
+              <th scope="row">{{programa.idConhecimento}}</th>
+              <td><button type="button" class="btn btn-link"  (click)="getAcoesPorPrograma(programa.nome)">{{programa.nome}}</button></td>
+              <td>{{programa.orcamento}}</td>
+              <td>{{programa.extraOrcamento}}</td>
+            </tr>
+         </tbody>
+    </table>
+</div>

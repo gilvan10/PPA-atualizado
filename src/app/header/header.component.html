@@ -1,0 +1,28 @@
+<body>
+    <nav class="header">
+        
+        <ul class="nav-list">
+            <li class="nome-projeto"><a [routerLink]="['/home']">PPA</a></li>
+            <li class="li-p"><a [routerLink]="['/eixos']">Eixos</a></li>
+            <li class="li-p"><a [routerLink]="['/programas']">Programas</a></li>
+            <li class="li-p"><a [routerLink]="['/acoes']">Ações</a></li>
+            <li class="li-p"><a [routerLink]="['/prefeituras-bairros']">Prefeituras-Bairro</a></li> 
+            <li class="li-p"><a [routerLink]="['/bairros']">Bairros</a></li> 
+            <!--<li class="li-p"><a [routerLink]="['/home']">Mapa</a></li> -->
+            <!--<div class="sair">
+              <li class="li-p"><a [routerLink]="['/login']" (click)="sair()"><i class="fas fa-sign-out-alt"></i>SAIR</a></li> 
+            </div>-->
+            
+            <!--<li class="li-p"><a [routerLink]="['/login']" ><i class="far fa-share-square"></i></a><li> -->
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Download
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../../assets/PPA completo 2022-2025.pdf" download="PPA 2022-2025">PPA 2022-2025</a></li>
+                    <li><a class="dropdown-item" href="../../assets/PPA Completo 2018-2021.pdf" download="PPA 2018-2021">PPA 2018-2021</a></li>
+                </ul>
+            </div>
+        </ul> 
+    </nav>
+</body>

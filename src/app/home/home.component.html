@@ -1,0 +1,17 @@
+<google-map height="657px"
+            width="100%"
+            [center]="center"
+            [zoom]="zoom">
+  <map-marker #marker="mapMarker"
+              *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              (mapClick)="openInfoWindow(marker)">
+              <map-info-window> <a href="http://localhost:4200/acoes">Visualizar informações de prefeitura bairro</a></map-info-window>
+   </map-marker>
+  
+</google-map>
+<!--Era depois do Zoom 
+    (mapClick)="addMarker($event)">-->
+
+    
+
